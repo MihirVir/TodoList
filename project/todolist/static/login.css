@@ -28,6 +28,7 @@ a{
     padding-left: 4px;
     margin:10px;
     width: 200px;
+    margin-left: 20px;
     border-radius: 1px;
     border: 0px;
     color: rgb(40, 49, 58);
@@ -38,6 +39,7 @@ a{
     font-weight: 600;
 }
 #btn-save{
+    margin-left: 20px;
     padding-top:4px;
     padding-bottom: 4px;
     padding-right: 20px;
@@ -49,7 +51,7 @@ a{
     transition: all 200ms ease-in-out;
     text-transform: upper;
     margin-top: 10px;
-    margin-left: 10px;
+    /* margin-left: 10px; */
 }
 #btn-save:hover{
     background: #141e30;
@@ -67,22 +69,101 @@ a{
     justify-content: center;
 }
 .card{
-    height: 40vh;
+    min-height: 30vh;
     width: 20vw;
     display: flex;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(4px);
-    border-radius: 10%;
+    /* background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(4px); */
+    background-color: rgb(160, 160, 160);
+    border-radius: 10px;
 }
 a:hover{
     color: aquamarine;
 }
 .text-align{
-    margin-top: 20px;
+    margin-top: -10px;
     text-align: center;
 }
 .label{
-    margin-left: 10px;
+    margin-left: 20px;
     color: #112;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+
+}
+.username{
+    height: 30px;
+    width: 240px;
+    margin-top: 10px;
+}
+a{
+    display: inline-block;
+    position: relative;
+
+}
+a:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #929191;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+a:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+@media screen and (max-w) {
+    
+}
+@media screen and (max-width: 1200px) {
+    .card{
+        width: 25vw;
+    }
+}
+@media screen and (max-width: 1060px) {
+    .card{
+        width: 30vw;
+    }
+}
+@media screen and (max-width: 930px) {
+    .card{
+        width: 34vw;
+    }
+}
+@media screen and (max-width: 840px) {
+    .card{
+        width: 38vw;
+    }
+}
+@media screen and (max-width: 750px) {
+    .card{
+        width: 42vw;
+    }
+}
+@media screen and (max-width: 669px) {
+    .card{
+        width: 46vw;
+    }
+}
+@media screen and (max-width: 600px){
+    .card{
+        width: 52vw;
+    }
+}
+@media screen and (max-width: 530px){
+    .card{
+        width: 60vw;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .card{
+        width: 23vw;
+    }
 }

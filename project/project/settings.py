@@ -39,8 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'todolist.apps.TodolistConfig',
-    'dajaxice',
-    'dajax',
+    
 ]
 
 MIDDLEWARE = [
@@ -134,9 +133,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS = [
    os.path.join(BASE_DIR.parent, './todolist/static/')
 ]
-STATICFILES_FINDERS = (
-   'django.contrib.staticfiles.finders.FileSystemFinder',
-   'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-   'dajaxice.finders.DajaxiceFinder',
-)
-DAJAXICE_MEDIA_PREFIX = 'dajaxice'
+
+

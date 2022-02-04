@@ -4,8 +4,6 @@ from .forms import UserForm
 from django.views.generic import View 
 from django.http import HttpResponse, JsonResponse
 from django.template import RequestContext
-from django.core.mail import send_mail
-from django.core.mail import EmailMultiAlternatives
 from django.template.loader import get_template
 # from project import todolist
 from django.contrib.auth.forms import UserCreationForm

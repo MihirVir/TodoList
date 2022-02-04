@@ -1,7 +1,6 @@
 from time import time
 from tkinter import CASCADE
 
-from click import edit
 from django.db import models
 from django.contrib.auth.models import User
 from enum import unique
@@ -9,7 +8,6 @@ from enum import unique
 import uuid
 
 from django.forms import PasswordInput
-from sqlalchemy import null
 # Create your models here.
 
 class Task(models.Model):

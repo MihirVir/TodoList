@@ -51,7 +51,7 @@ hr{
 
 .text-space-div{
     height: 25vh;
-    width: 37vw;
+    width: 35vw;
     background-color: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(4px);
      border-radius: 8px;
@@ -205,4 +205,13 @@ a{
 }
 .rain{
     z-index: 1;
+}
+@media screen and (min-width: 1080px) {
+    .text-space-div{
+        width: 27vw;
+        height: 20vh;
+    }
+    .task-main{
+        margin-top: -40px;
+    }
 }
