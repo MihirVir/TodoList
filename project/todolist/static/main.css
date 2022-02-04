@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    /* background: linear-gradient(90deg, #edc0bf 0,#c4caef 58%); */
+    background: linear-gradient(#141e30, #243b55);
+    overflow-x: hidden;
+}
+.heading{
+    text-transform: uppercase;
+    color: rgb(223, 223, 223);
+}
+hr{
+    margin-left: -20px;
+}
+.label-name{
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+.text-input{
+    height: 25px;
+    width: 200px;
+    /* margin: 10px; */
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 0;
+    padding: 4px;
+}
+
+.submit-btn{
+    height: 30px;
+    width: 150px;
+    border-radius: 20px;
+    /* background: linear-gradient(to right, #9796f0, #fbc7d4); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: 2px solid #fff;
+    /* text-transform: uppercase; */
+    margin-left: 20px;
+    margin-right: 10px;
+    background-color: #fff;
+    font-weight: 400;
+    font-size: 1.1rem;
+    background: transparent;
+    color: #fff;
+
+    transition: all 200ms ease-in;
+}
+
+.text-space-div{
+    height: 25vh;
+    width: 37vw;
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(4px);
+     border-radius: 8px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+    color: #fff;
+    
+}
+.label-name{
+    margin-right: 10px;
+    /* margin-left: 20px; */
+}
+.nav-bar{
+    height: 10vh;
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left:20px;
+
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.main-div-card{
+
+    height: 40vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+}
+.task-main{
+    margin-top: -30px;
+    min-height: 70vh;
+    width: 100vw;
+    display: flex;
+    /* background-color: pink; */
+    justify-content: center;
+    /* align-items: center; */
+    margin-right: -10px;
+    
+}
+
+/* .idk{
+    /* margin-top: 10px; */
+    /* display: flex; */
+    /* flex-direction: column; */
+/* } */ 
+/* .idk{
+    height: 200px;
+    width: 400px;
+    background-color: red;
+} */
+
+.rain{
+    height: 90px;
+    width: 400px;
+    /* background-color: red; */
+    background: rgba(255, 255, 255, .2);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.inside-loop{
+    margin-left: 10px;
+}
+.why{
+    margin-left: 10px;
+}
+.logout-link{
+    color: #fff;
+    border: 2px solid #fff;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    text-align: center;
+    font-size: 14px;
+    transition: all 200ms ease-in;
+    border-radius: 5px;
+}
+.logout-link:hover{
+    background-color: #fff;
+    color: #111;
+}
+.svg-ani{
+    transform: translateY(-10px);
+    filter: invert(0);
+    transition: all 200ms ease-in-out;
+}
+.svg-ani:hover{
+    filter: invert(1);
+}
+#check{
+    height: 40px;
+}
+@media screen and (max-width: 950px) {
+    .text-space-div{
+        width: 44vw;
+    }
+}
+@media screen and (max-width: 800px) {
+    .text-space-div{
+        width: 50vw;
+    }
+}
+@media screen and (max-width: 700px) {
+    .text-space-div{
+        width: 60vw;
+    }
+}
+@media screen and (max-width: 560px) {
+    body{
+        overflow-x: hidden;
+    }
+    .text-space-div{
+        width: 85vw;
+    }
+}
+@media screen and (max-height: 750px) {
+    .rain{
+        width: 350px;
+    }
+}
+.submit-btn:hover{
+    background: #fff;
+    color: #111;
+}
+.svg-ani{
+    transition: all 200ms ease-in-out;
+}
+.svg-ani:hover:hover{
+    transform: translateY(-4px);
+}
+.rain{
+    transition: all 200ms ease-in-out;
+}
+.rain:hover{
+    transform: translateY(-5px);
+}
+.cirlce{
+    z-index: -2;
+}
+.rain{
+    z-index: 1;
+}

@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static './login.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    {% if invalid %}
+    <div> 
+        <h3> Enter right credentials </h3>
+    </div>
+{%endif%}
+<h1 id = "heading"> Login </h1>
+
+<div class="wrapper">
+    <div class="card">
+        <form method = "POST" autocomplete = "off">
+            {%csrf_token%}
+            <label class = "label">Enter your credentials</label> 
+            <input id = "user" class = "username" type = "text" name = "username" placeholder = 'Username' >
+            <input id = "user" class = "username" type = "password" name = "password" placeholder = "Password"  >
+            <input id = "btn-save" type = "submit" value = "Login">
+        </form>
+    </div>
+</div>
+<p class = "text-align">Don't have an account?. We got you :) <a href = "{% url 'register'%}"> Register </a></p>
+</body>
+<script>
+    document.getElementById('user').value = '';
+</script>
+</html>

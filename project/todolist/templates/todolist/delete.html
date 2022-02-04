@@ -1,0 +1,10 @@
+{% comment %} {%extends 'main.html'%}
+{%block content%}
+    <form method = "POST" action = "">
+        {%csrf_token%}
+        <p> you sure u wanna delete "{{object}}"</p>
+        <a href = "{% url 'projects'%}">
+            go back
+        </a>
+        <input  type = "submit" value = "Delete"/>
+{%endblock%} {% endcomment %}

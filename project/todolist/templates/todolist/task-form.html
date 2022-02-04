@@ -1,0 +1,57 @@
+
+{%extends 'main.html'%}
+{% load static%}
+{%block content%}   
+<form method = "POST" action = "" id = "form"  >
+   
+    {% csrf_token %}
+    <div class="main-div-card">
+        <div class = "text-space-div">
+            <div class = "div-mar">
+                <label class = "label-name">Task </label>
+                <input id = "taskName" class = "text-input" type = "text"  name = "taskName" placeholder = "Enter Task Name" autocomplete="off">
+                <!-- <input id = "checked" type = "checkbox" id = "complete" name = "complete"> -->
+            </div>
+            <div class = "div-mar">
+                
+                
+            </div>
+            <div>
+                <input id = "btnsave"class = 'submit-btn' type = "submit" value = "Submit">
+            </div>
+        </div>
+    </div>
+    
+   
+    {% comment %} <!-- <div>
+        <input class = 'submit-btn' type = "submit" value = "submit">
+    </div> --> {% endcomment %}
+</form>
+
+<div class = "task-main">
+    <div class = idk>
+        {% for i in tasks%}
+        <div class = "rain">
+            <p class = "inside-loop">
+                {{i.taskName}}
+                
+            </p>
+            <p class = "inside-loop" id = "check">
+                {{i.created}}
+            </p>
+            
+            <!-- {{i.user}} -->
+            <div class = "why">
+                <a  href = "{% url 'update-task' i.taskId %}"> <i class="far fa-edit svg-ani"></i> </a>
+                <a  href = "{% url 'delete-task' i.taskId%}"> <i class="fas fa-trash svg-ani"></i> </a>
+            </div>
+        
+            
+        </div>
+            
+        
+        {%endfor%}
+    </div>
+
+
+{%endblock%} 

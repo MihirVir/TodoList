@@ -1,0 +1,25 @@
+{%extends 'main.html'%}
+{%block content%} 
+{% comment %} <h2> {{request.user}} </h2>
+<hr> {% endcomment %}
+{% comment %} {% for i in tasks%}
+    <div>
+        {{i.taskName}}
+    </div>
+    <div>
+        <a href = {% url 'update-task' i.taskId %} <p>update</p> </a>
+        <a href = {%url 'delete-task' i.taskId%} <p> Delete</p> </a>
+    </div>
+{%endfor%} {% endcomment %}
+<form method = "POST">
+    {%csrf_token%}
+    <div>
+    {{form.username.label}}
+    {{form.username}}
+    </div>
+   <div>
+    {{form.password.label}}
+    {{form.password}}
+   </div>
+    <input type = "Submit" value = "submit">
+{%endblock%}
