@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(#141e30, #243b55);
+    height: 100vh;
+    color: #fff;
+}
+.heading{
+    font-size: 3rem;
+    font-weight: 800;
+}
+.wrapper{
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    animation-name: dance ;
+    animation-duration: 2.4s;
+    animation-iteration-count: infinite;
+    width: 20vw;
+    min-height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    color: #111;
+}
+input{
+    padding: 4px;
+    margin-bottom: 10px; 
+    width: 200px;  
+}
+.register-btn{
+    padding: 6px;
+    margin-top: 10px;
+    background-color: whitesmoke;
+    border: 0px;
+    border-radius: 2px;
+    transition: all 100ms ease-in;
+}
+.register-btn:hover{
+    background-color: #111;
+    color: #fff;
+}
+.heading{
+    margin-left: 20px;
+}
+p{
+    margin-top: 40px;
+    text-align: center;
+    font-size: 1.1rem;
+    
+}
+a{
+    text-decoration: none;
+    color: rgb(0, 255, 34);
+}
+@keyframes dance {
+    from {
+        transform: translateY(10px);
+    }50%{
+        transform: translateY(20px);
+    }to{
+        transform:translateY(10px);
+    }
+    
+}
+@media screen and (max-width: 1100px){
+    .card{
+        width: 30vw;
+    }
+}
+@media screen and (max-width: 800px){
+    .card{
+        width: 40vw;
+    }
+}
+@media screen and (max-width: 600px){
+    .card{
+        width: 50vw;
+    }
+}
+@media screen and (max-width: 445px){
+    .card{
+        width: 55vw;
+    }
+}
+@media screen and (max-width: 380px) {
+    .card{
+        width: 80vw;
+    }
+}
+a{
+    display: inline-block;
+    position: relative;
+
+}
+a:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #929191;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+a:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}

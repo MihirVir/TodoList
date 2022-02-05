@@ -11,8 +11,9 @@ body{
     overflow-x: hidden;
 }
 .heading{
-    text-transform: uppercase;
+    text-transform: capitalize;
     color: rgb(223, 223, 223);
+    font-size: 3rem;
 }
 hr{
     margin-left: -20px;

@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static './register.css' %}">
+</head>
+<body>
+    <h1 class = "heading">
+        Register
+    </h1>
+    <div class = "wrapper">
+        <div class="card">
+            <form method="POST">
+                {% csrf_token %}
+                <div>
+                    {{form.username.label}}
+                </div>
+                {{form.username}}
+                <div>
+                    {{form.password1.label}}
+                </div>
+                
+                {{form.password1}}
+                <DIV>
+                    {{form.password2.label}}
+                </DIV>
+                
+                {{form.password2}}
+                {% comment %} {{form.as_p}} {% endcomment %}
+              <div>
+                <input class = "register-btn" type="submit" value="Register">
+              </div>  
+            </form>
+            
+        </div>
+        
+    </div>
+    <p> Already have an account?<a href = "{% url 'login'%}"> Login </a> </p>
+</body>
+</html>
